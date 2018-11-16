@@ -1,11 +1,9 @@
 package TutorialPackage;
+
 public class tut2 {
-			
-	public void isPrime() {
-				
 	
-	}
+	public static void main(String[] args) {
+		
+	}//end main
 			
 }//end class
-	
-
