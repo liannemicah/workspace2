@@ -14,10 +14,19 @@ public class tut1 {
 		double circumference = 2 * Math.PI * radius; 
 		return circumference; 
 	}
-    
+	
 	public static void areaOfRectangle(int l, int w) {
+		double r = 4.6;
+		double c = circumference(r);
 		
+		System.out.println("circumference is: " + c);
+		
+		int l = 4;
+		int w =10;
+		
+		System.out.println("area is: " + areaOfRectangle(l,w));
 	}
+
 	
 	public static void printName() {
 		for(int i = 0; i < 5; i++) {
@@ -73,17 +82,7 @@ public class tut1 {
 //		int randomNum = rand.nextln(11) + 5;
 		
 //		System.out.println(randomNum);
-		
-	double r = 4.6;
-	double c = circumference(r);
-	
-	System.out.println("circumference is: " + c);
-	
-	int l = 4;
-	int w =10;
-	
-	System.out.println("area is: " + areaOfRectangle(l,w));
-		
+
 	}//end main
 
 }//end class

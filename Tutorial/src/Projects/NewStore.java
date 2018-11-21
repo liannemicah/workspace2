@@ -89,6 +89,6 @@ public class NewStore {
 	}
 	public static void main(String[] args) {
 		menu();
-		}//end main
+	}//end main
 
 }//end class

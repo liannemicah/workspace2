@@ -733,41 +733,43 @@ public static void knockknock() {
     Endgame();
     // calls the function Endgame() to continue to it
   }
-  elif choice== 2:
+  else if(choice == 2) {
   // else if the choice is equal to 2 continue
-    System.out.println ("The noise is getting louder.")
+    System.out.println ("The noise is getting louder.");
     // System.out.printlns "The noise is getting louder."
     //sleep(2)
     // //sleeps the program for 2 seconds
-    System.out.println ("You begin to hear whispers outside the door.")
+    System.out.println ("You begin to hear whispers outside the door.");
     // System.out.printlns "You begin to hear whispers outside the door."
     //sleep(3)
     // //sleeps the program for 3 seconds
-    System.out.println ("Someone outside says.")
+    System.out.println ("Someone outside says.");
     // System.out.printlns "Someone outside says."
     //sleep(2)
     // //sleeps the program for 2 seconds
-    System.out.println ("OPEN THE DOOR, OR WE WILL!")
+    System.out.println ("OPEN THE DOOR, OR WE WILL!");
     // System.out.printlns "OPEN THE DOOR, OR WE WILL!"
     //sleep(3)
     // //sleeps the program for 3 seconds
-    System.out.println ("You're going to have to make a choice whether to open the door or not.")
+    System.out.println ("You're going to have to make a choice whether to open the door or not.");
     // System.out.printlns "You're going to have to make a choice whether to open the door or not."
     
-    choice= int(input("Enter 1 to open Door, Enter 2 to keep it closed."))
+    System.out.println("Enter 1 to open Door, Enter 2 to keep it closed.");
+    int choice = input.nextInt();
     // creates variable choice and System.out.printlns "Enter 1 to open Door, Enter 2 to keep it closed."
-    if choice== 1:
+    if(choice == 1) {
     // if the choice is equal to 1 continue
-      System.out.println ("You aproach the door quickly")
+      System.out.println ("You aproach the door quickly");
       // System.out.printlns "You aproach the door quickly"
       //sleep(2)
       // //sleeps the program for 2 seconds
-      System.out.println ("You can still go back if you'd like?")
+      System.out.println ("You can still go back if you'd like?");
       // System.out.printlns "You can still go back if you'd like"
       //sleep(2)
       // //sleeps the program for 2 seconds
       
-      choice= int(input("Enter 1 to turn handle, Enter 2 to not open."))
+      System.out.println("Enter 1 to turn handle, Enter 2 to not open.");
+      int choice = input.nextInt();
       // creates the variable choice and System.out.printlns "Enter 1 to turn handle, Enter 2 to not open"
       if choice == 1:
       // if the user choice is equal to 1 continue
@@ -793,6 +795,8 @@ public static void knockknock() {
         // //sleeps the program for 3 seconds
         Bustdoor()
         // calls the function Bustdoor() to go to it
+    }//end if
+  }
       else:
       // if the user choice is anything other than 1 or 2 continue
         System.out.println ("Invalid choice")
