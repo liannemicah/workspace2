@@ -1,4 +1,4 @@
-package TutorialPackage;
+package Hero;
 
 public class Meteorite {
 	

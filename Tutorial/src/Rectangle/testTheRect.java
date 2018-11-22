@@ -1,4 +1,4 @@
-package TutorialPackage;
+package Rectangle;
 
 public class testTheRect {
 

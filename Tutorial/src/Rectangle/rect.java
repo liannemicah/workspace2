@@ -1,4 +1,4 @@
-package TutorialPackage;
+package Rectangle;
 
 public class rect {
 //instance variables or attributes
@@ -15,11 +15,11 @@ public class rect {
 		width = 50;
 	}
 	
-	public rect(int x, int y, int length, int width) {
+	public rect(int x, int y, int l, int w) {
 		this.x = x;
 		this.y = y;
-		this.length = length;
-		this.width = width;
+		length = l;
+		width = w;
 	}
 	
 //	public rect(int newX, int y, int length, int width) {
@@ -40,7 +40,7 @@ public class rect {
 	}
 	
 	public String toString() {
-		return "x: " + x + "  y: " + y + "  l: " + length + "  w: " + width;
+		return "x: " + x + "  y: " + y + "  l: " + l + "  w: " + w;
 	}
 
 }//end class
