@@ -4,9 +4,12 @@ import java.util.Scanner;
 import java.util.Random;
 public class PyGame {
 	
+	private static Scanner input;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
+	
 
 //System.out.println("This game will be based on your choices.")
 // System.out.printlns "This game will be based on your choices."
@@ -21,6 +24,7 @@ int UserHP = 50;
 // sets UserHP to 50
 ArrayList<String> Backpack = new ArrayList<>();
 // makes a backpack which will be filled with items during gameplay
+	}
 
 public static void YourRoom1() {
 // creates YourRoom with no arguments  
@@ -72,7 +76,7 @@ public static void YourRoom1() {
   // if the anwser is different than 1 or 2 continue
     System.out.println ("Invalid choice, Try again");
     // System.out.printlns Invalid choice, Try again
-    YourRoom1()
+    YourRoom1();
 }
 
 public static void window1() {
@@ -771,301 +775,326 @@ public static void knockknock() {
       System.out.println("Enter 1 to turn handle, Enter 2 to not open.");
       int choice = input.nextInt();
       // creates the variable choice and System.out.printlns "Enter 1 to turn handle, Enter 2 to not open"
-      if choice == 1:
+      if(choice == 1) {
       // if the user choice is equal to 1 continue
-        System.out.println ("You slowly turn the handle.")
+        System.out.println ("You slowly turn the handle.");
         // System.out.printlns "You slowly turn the handle."
         //sleep(2)
         // //sleeps the program for 2 seconds
-        System.out.println ("The door opens.")
+        System.out.println ("The door opens.");
         // System.out.printlns "The door opens."
         //sleep(2)
         // //sleeps the program for 2 seconds
-        System.out.println ("It's Your family.")
+        System.out.println ("It's Your family.");
         // System.out.println ("It's Your family.")
         //sleep(3)
         // //sleeps the program for 3 seconds
-        Endgame()
+        Endgame();
         // calls the function endgame() to go to it
-      elif choice == 2:
+      }
+      else if(choice == 2) {
       // else if the user choice is equal to 2 continue
-        System.out.println("You step back and wait to see what happens.")
+        System.out.println("You step back and wait to see what happens.");
         // System.out.printlns "You step back and wait to see what happens."
         //sleep(3)
         // //sleeps the program for 3 seconds
-        Bustdoor()
+        Bustdoor();
         // calls the function Bustdoor() to go to it
+      }
     }//end if
-  }
-      else:
+  }//end else if
+      else {
       // if the user choice is anything other than 1 or 2 continue
-        System.out.println ("Invalid choice")
+        System.out.println ("Invalid choice");
         // System.out.printlns "Invalid choice"
         //sleep(3)
         // //sleeps the program for 3 seconds
-        System.out.println ("Try again")
+        System.out.println ("Try again");
         // pritns "Try again"
         //sleep(2)
         // //sleeps the program for 2 seconds
-        knockknock()
+        knockknock();
         // calls the function knock knock to go to it.
-    elif choice == 2:
+      }
+    else if(choice == 2) {
     // else if the choice is equal to 2 continue
-      System.out.println ("You patiently wait for what happens next.")
+      System.out.println ("You patiently wait for what happens next.");
       // System.out.printlns "You patiently wait for what happens next."
       //sleep(3)
       // //sleeps the program for 3 seconds
-      Bustdoor()
+      Bustdoor();
       // calls the function Bustdoor() to go to it
-    else:
+    }
+    else {
     // if the user choose anything other than 1 or 2 continue
-      System.out.println("Invalid choice.")
+      System.out.println("Invalid choice.");
       // System.out.printlns "Invalid choice."
       //sleep(2)
       // //sleeps the program for 2 seconds
-      System.out.println("Try again")
+      System.out.println("Try again");
       // System.out.printlns "Try again"
       //sleep(2)
       // //sleeps the program for 2 seconds
-      knockknock()
+      knockknock();
       // calls the function knockknock() to go to it.
+    }
       
 }//end knockknock()
 
-def Bustdoor():
+public static void Bustdoor() {
 // defines the function Bustdoor():
-  System.out.println ("The door gets busted down.")
+  System.out.println ("The door gets busted down.");
   // System.out.printlns "The door gets busted down."
   //sleep(3)
   // //sleeps the program for 3 seconds
-  System.out.println ("It's your family.")
+  System.out.println ("It's your family.");
   // System.out.printlns "It's your family."
   //sleep(3)
   // //sleeps the program for 3 seconds
-  Endgame()
+  Endgame();
   // call the function Endgame() to go to it.
+}
     
   
 
-def gunroom():
+public static void gunroom() { 
 // defines the variable gunroom()  
-  System.out.println ("Ok, you don't have to continue if you dont want to.")
+  System.out.println ("Ok, you don't have to continue if you dont want to.");
   // System.out.printlns "Ok, you don't have to continue if you dont want to."
   //sleep(2)
   // //sleeps the program for 2 seconds
-  System.out.println ('''
-  1. Turn the handle and take the chance of the alarm going off?
-  2. Return to the kitchen?
-  ''')
+  System.out.println("1. Turn the handle and take the chance of the alarm going off?"
+		  		 + "\n2. Return to the kitchen?");
   //System.out.printlns
   // 1. Turn the handle and take the chance of the alarm going off?
   // 2. Return to the kitchen?
   
-  choice = int(input("Enter 1 to enter the room, Enter 2 to return to kitchen"))
+  System.out.println("Enter 1 to enter the room, Enter 2 to return to kitchen");
+  Scanner input;
+int choice = input.nextInt();
   // creates the variable choice and System.out.printlns "Enter 1 to enter the room, Enter 2 to return to kitchen"
-  if choice == "1":
+  if(choice == 1) {
   // if the user choice equals to 1 continue 
-    System.out.println ("BEEP! BEEP! BEEP!")
+    System.out.println ("BEEP! BEEP! BEEP!");
     // System.out.printlns "BEEP! BEEP! BEEP!"
     //sleep(3)
     // //sleeps the program for 3 seconds
-    System.out.println ("....Groan....")
+    System.out.println ("....Groan....");
     // System.out.printlns "....Groan...."
     //sleep(3)
     // //sleeps the program for 3 seconds
-    gunroominside()
+    gunroominside();
     // calls the function gunroominside() to continue to it
-  elif choice == 2:
+  }
+  else if(choice == 2) {
   // else if the choice is equal to 2 continue
-    kitchen1()
+    kitchen1();
     // calls the function kitchen1() to go to it
-  else:
+  }
+  else {
   // if the user choice is something other than 1 or 2 continue
-    System.out.println ("I think you have misread the question")
+    System.out.println ("I think you have misread the question");
     // System.out.printlns "I think you have misread the question"
     //sleep(2)
     // //sleeps the program for 2 seconds
-    System.out.println ("Try again")
+    System.out.println ("Try again");
     // System.out.printlns "Try again"
     //sleep(1)
     // //sleeps the program for 1 seconds
-    gunroom()
+    gunroom();
     // calls the function gunroom() to go to it
+  }
+}//end gunroom()
     
 
-def gunroominside():
+public static void gunroominside() {
 // defines gun room inside
-  System.out.println ("Quickly! Grab a gun! THE ZOMBIES ARE COMING!")
+  System.out.println ("Quickly! Grab a gun! THE ZOMBIES ARE COMING!");
   // System.out.printlns "Quickly! Grab a gun! THE ZOMBIES ARE COMING!"
   //sleep(2)
   // //sleeps the program for 2 seconds
-  System.out.println ('''Your choice of guns are:
-  1: Pistol
-  2: Shotgun
-  ''')
+  System.out.println ("Your choice of guns are:"
+		  			+ "\n1: Pistol"
+		  			+ "\n2: Shotgun");
   //System.out.printlns '''Your choice of guns are:
   // 1: Pistol
   // 2: Shotgun
   
-  choices = int(input("Enter 1 for Pistol, Enter 2 for Shotgun"))
+  System.out.println("Enter 1 for Pistol, Enter 2 for Shotgun");
+  int choice = input.nextInt();
   // creates the variable choices and System.out.printlns "Enter 1 for Pistol, Enter 2 for Shotgun"
-  if choices == "1" and "Pistol" not in Backpack:
+  if(choices == 1 && !Backpack.contain("Pistol")) {
   // if the user choice is equal to 1 and Pistol is not in Backpack continue
-    if "Pistol" in Backpack:
+    if(Backpack.contain("Pistol")) {
     // if "Pistol" is already in the variable Backpakc continue
-      System.out.println ("You already have a Pistol you goof!")
+      System.out.println ("You already have a Pistol you goof!");
       // System.out.printlns "You already have a Pistol you goof!"
-    if "Pistol" not in Backpack:
+    }
+    if(!Backpack.contain("Pistol")) {
     // if "Pistol" is not in the variable Backpack continue
-      System.out.println ("Good choice, flexible gun with lots of options!")
+      System.out.println ("Good choice, flexible gun with lots of options!");
       //System.out.printlns "Good choice, flexible gun with lots of options!"
-      Backpack.append("Pistol")
+      Backpack.append("Pistol");
       // Adds the String Pistol to The variable Backpack
-  elif choices == "2" and "Shotgun" not in Backpack:
+    }
+  }
+  else if(choices == "2" and "Shotgun" not in Backpack) {
   // else if the user choice is equal to 2 and Shotgun is not in Backpack continue
-    if "Shotgun" in Backpack:
+    if(Backpack.contain("Shotgun")) {
     // if the "Shotgun" string is in Backpack continue
-      System.out.println ("You already have a Pistol you goof!")
+      System.out.println ("You already have a Pistol you goof!");
       // System.out.printlns "You already have a Pistol you goof!"
-    if "Shotgun" not in Backpack:
+    }
+    if(!Backpack.contain("Shotgun")) {
     // if "Shotgun" string is not in Backpack continue
-      System.out.println ("Good choice, Easy kills with this bad boy!")
+      System.out.println ("Good choice, Easy kills with this bad boy!");
       // System.out.printlns "Good choice, Easy kills with this bad boy!"
-      Backpack.append("Shotgun")
+      Backpack.append("Shotgun");
       // Adds the string "Shotgun" to the variable Backpack
-  else:
+    }
+  }
+  else {
   // if something else other than 1 or 2 is chosen continue
-    System.out.println ("Wasn't in the choices sorry")
+    System.out.println ("Wasn't in the choices sorry");
     // System.out.printlns "Wasn't in the choices sorry"
     //sleep(3)
     ////sleeps the program for 3 seconds
-    gunroominside()
+    gunroominside();
     //calls the function gunroominside to go to it
+  }
     
-  System.out.println ("5 zombies are incoming!")
+  System.out.println ("5 zombies are incoming!");
   // System.out.printlns "5 zombies are incoming!"
   //sleep(3)
   // //sleeps the program for 3 seconds
-  System.out.println ("Are you going to run? Or are you going to fight?")
+  System.out.println ("Are you going to run? Or are you going to fight?");
   //System.out.printlns "Are you going to run? Or are you going to fight?"
   
-  choice = int(input("Enter 1 to Run, or Enter 2 to fight!"))
+  System.out.println("Enter 1 to Run, or Enter 2 to fight!");
+  int choice = input.nextInt();
   // makes the variable choice and System.out.printlns "Enter 1 to Run, or Enter 2 to fight!"
-  if choice == 2:
+  if(choice == 2) {
   // if the user choice is 1 continue
-    System.out.println ("PREPARE TO FIGHT!!")
+    System.out.println ("PREPARE TO FIGHT!!");
     // System.out.printlns "PREPARE TO FIGHT!!"
-    Fightnumber1()
+    Fightnumber1();
     // calls the function Fightnumber1() to go to it
-  elif choice == 1:
+  }
+  else if(choice == 1) {
   // else if the choice is equal to 2 continue
-    System.out.println ("You run right into the hoard of zombies and get caught.")
+    System.out.println ("You run right into the hoard of zombies and get caught.");
     // System.out.printlns "You run right into the hoard of zombies and get caught."
     //sleep(3)
     ////sleeps the program for 3 seconds
-    System.out.println ("You die sorry.")
+    System.out.println ("You die sorry.");
     // System.out.printlns "You die sorry."
     //sleep(3)
     // //sleeps the program for 3 seconds
-    gunroominside()
+    gunroominside();
     // calls the function gunroominside() to continue to it
-  else:
+  }
+  else {
   // if anything else is written other than 1 or 2 continue
-    System.out.println ("I don't think you understood the question.")
+    System.out.println ("I don't think you understood the question.");
     // System.out.printlns  "I don't think you understood the question"
     //sleep(3)
     // //sleeps the program for 3 seconds
-    System.out.println ("Try again")
+    System.out.println ("Try again");
     // System.out.printlns "Try again"
     //sleep(2)
     // //sleeps the program for 2 seconds
-    gunroominside()
+    gunroominside();
     // calls the function gunroominside() to go back to it
+  }
+}//end gunroominside()
 
-def Fightnumber1():
+public static void Fightnumber1() {
 //defines Fightnumber1 with no parameters
-  System.out.println ("Intense music incoming!")
+  System.out.println ("Intense music incoming!");
   // System.out.printlns "Intense music incoming!"
   //sleep(3)
   // //sleeps the program for 3 seconds
-  System.out.println ("First zombie coming")
+  System.out.println ("First zombie coming");
   // System.out.printlns "First zombie coming"
   //sleep(2)
   // //sleeps the program for 2 seconds
-  choice = int(input("Enter 1 to shoot in the head or 2 in the chest"))
+  System.out.println("Enter 1 to shoot in the head or 2 in the chest");
+  int choice = input.nextInt();
   // creates the variable choice and asks the user "Enter 1 to shoot in the head"
-  if choice == 1:
+  if(choice == 1) {
   // if the choice is equal to 1 continue
-    System.out.println ("You shoot the zombies in the head")
+    System.out.println ("You shoot the zombies in the head");
     // System.out.printlns "You shoot the zombies in the head"
     //sleep(3)
     // //sleeps the program for 3 seconds
-    System.out.println ("They all die")
+    System.out.println ("They all die");
     // System.out.printlns "They all die"
     //sleep(2)
     // //sleeps the program for 2 seconds
-    System.out.println ("Congratulations")
+    System.out.println ("Congratulations");
     // System.out.printlns Congratulations
+  }
+}
   
-def Endgame():
+public static void Endgame() {
 // defines function Endgame()
-  System.out.println ("Congratulations!")
+  System.out.println ("Congratulations!");
   // System.out.printlns "Congratulations!"
   //sleep(2)
   // //sleeps the program for 2 seconds
-  System.out.println ("You have succesfully found your family!")
+  System.out.println ("You have succesfully found your family!");
   // System.out.printlns "You have succesfully found your family!"
   //sleep(3)
   ////sleeps the program for 3 seconds
-  System.out.println ("And without dying too!")
+  System.out.println ("And without dying too!");
   // System.out.printlns "And without dying too!"
   //sleep(2)
   // //sleeps the program for 2 seconds
-  System.out.println ("I hope....")
+  System.out.println ("I hope....");
   // System.out.printlns "I hope...."
   //sleep(2)
   // //sleeps the program for 2 seconds
-  System.out.println ("Would you like to play again or End?")
+  System.out.println ("Would you like to play again or End?");
   // System.out.printlns "Would you like to play again or End?"
   //sleep(3)
   // //sleeps the program for 3 seconds
   
-  choice = int(input("Enter 1 to play again or 2 to End."))
+  System.out.println("Enter 1 to play again or 2 to End.");
+  int choice = input.nextInt();
   // creates the variable choice and System.out.printlns "Enter 1 to play again or 2 to End."
-  if choice == 1:
+  if(choice == 1) {
   // if the user choice is equal to 1 continue
-    System.out.println ("Good Luck!")
+    System.out.println ("Good Luck!");
     // System.out.printlns "Good Luck!"
     //sleep(2)
     // //sleeps the program for 2 seconds
-    YourRoom()
+    YourRoom1();
     // calls the function YourRoom() to go to it
-  elif choice == 2:
+  }
+  else if(choice == 2) {
   // else if the user choice is equal to 2 continue
-    System.out.println ("Ok that's Fine!")
+    System.out.println ("Ok that's Fine!");
     // System.out.printlns "Ok that's Fine!"
     //sleep(2)
     // //sleeps the program for 2 seconds
-    System.out.println ("Just press the Stop◻️ button at the top")
+    System.out.println ("Just press the Stop◻️ button at the top");
     // System.out.printlns "Just press the Stop◻️ button at the top"
-  else:
+  }
+  else {
   // if user choice is anything other than 1 or 2 continue
-    System.out.println ("Come on it's the end of the game.")
+    System.out.println ("Come on it's the end of the game.");
     // System.out.printlns "Come on it's the end of the game."
     //sleep(2)
     // //sleeps the program for 2 seconds
-    System.out.println ("And you still don't understand enter 1 or 2. Jeeze.")
+    System.out.println ("And you still don't understand enter 1 or 2. Jeeze.");
     // System.out.printlns "And you still don't understand enter 1 or 2. Jeeze."
     //sleep(3)
     // //sleeps the program for 3 seconds
-    Endgame()
+    Endgame();
     // calls the function Endgame() to go to it.
+  }
+}//end Endgame()
     
-	public static void window1();
 
-  
-YourRoom()
-// calls the function YourRoom() which untimately starts the whole game
-	}
 
-}
+
