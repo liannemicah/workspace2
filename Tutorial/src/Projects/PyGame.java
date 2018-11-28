@@ -21,7 +21,7 @@ public class PyGame {
 // imports //sleep from time
 		int UserHP = 50;
 // sets UserHP to 50
-		
+		YourRoom1();
 // makes a backpack which will be filled with items during gameplay
 	}
 
