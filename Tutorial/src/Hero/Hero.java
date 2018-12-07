@@ -7,6 +7,15 @@ public class Hero {
 	private int health;
 	private int dmg;
 	
+	/**
+	 * constructor to build hero
+	 * @param name - hero's name
+	 * @param power - the hero's super power
+	 * @param age
+	 * @param health
+	 * @param damage
+	 */
+	
 	public Hero() {
 		name = "Jane doe";
 		power = "super speed";
