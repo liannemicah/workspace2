@@ -1,27 +1,12 @@
 package TutorialPackage;
 public class tut3 { 
-	
-	public static boolean doesMatch() {
-	
-		boolean match;
-		boolean d = true;
-		boolean f = true;
-		
-		if(d == f) {
-			match = true;
-		}
-		else {
-			match = false;
-		}
-		
-		System.out.println(match);	
-		return doesMatch();
-		
-	}//end doesMatch
-	
+
 	public static void main(String[] args) {
+		int homer[] = new int[800];
 		
-		doesMatch();
+		for(int k = 2; k < homer.length; k++) {
+			homer[k+1] = k;
+		}
 
 	}//end main
 	

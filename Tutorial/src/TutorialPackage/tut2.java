@@ -1,7 +1,7 @@
 package TutorialPackage;
 import java.util.Random;
 
-public class tut2 {
+public class tut2 {//problem set
 	
 	public static boolean isPrime() {
 		

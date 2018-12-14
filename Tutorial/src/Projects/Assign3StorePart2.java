@@ -3,53 +3,46 @@ import java.util.Scanner;
 
 public class Assign3StorePart2 {
 	
+	//creates initial static variables to determine price and the amount of items chosen by user 
 	static double itemPrice = 0;
-	static int[] itemQty = new int [10];
-
-	static int totalQty = 0;
 	static double totalPrice = 0;
-//	static int qty1 = 0;
-//	static int qty2 = 0;
-//	static int qty3 = 0;
-//	static int qty4 = 0;
-//	static int qty5 = 0;
-//	static int qty6 = 0;
-//	static int qty7 = 0;
-//	static int qty8 = 0;
-//	static int qty9 = 0;
-//	static int qty10 = 0;
-		static String[] products = {"banana","yogurt","cheese","lettuce","cucumber","tomato","salmon","chicken","orange","pineapple"};
-		static double[] price = {0.89,3.99,4.99,2.35,2.46,4.65,12.54,9.56,4.61,5.49};
+	static int totalQty = 0;
+	//an array to determine the amount of items user picks
+	static int[] itemQty = new int [10];//this array can store up to 10 elements
+
+	static String[] products = {"banana","yogurt","cheese","lettuce","cucumber","tomato","salmon","chicken","orange","pineapple"};//static String array lists of what products are in stock
+	static double[] price = {0.89,3.99,4.99,2.35,2.46,4.65,12.54,9.56,4.61,5.49};//static double array of how much the products each cost
 		
-	public static void shopping() {
-		
+	public static void shopping() {//where the user shops for food
 		Scanner input = new Scanner(System.in);//creates a scanner to scan input
 
-		int itemNum;
-		System.out.println("Hi, welcome to the grocery store.");
-		System.out.println();
+		int itemNum;//creates int variable to scan input
+		System.out.println("Hi, welcome to the grocery store.");//welcomes user to what store they're in
+		System.out.println();//spacer
 		
-		do {
+		do {//do statement
 			
-			System.out.println();
-	
+			System.out.println();//spacer
+			//prints lists for the products and their prices
 			for(int i = 0; i < products.length; i++) {
 				System.out.println((i+1)+ ". " + products[i] + "\t $" + price[i]);
 			}
 			
-			System.out.println();
+			System.out.println();//spacer
+			//tells user to print the item number of what they want or print 0 when their done
 			System.out.println("Print the number of the product you'd like to purchase, or print 0 when you're done: ");
-			itemNum = input.nextInt();
+			itemNum = input.nextInt();//scans the item number the user prints
+			//prints how much they'd like of what # they chose as long as it is not 0
 			if(itemNum != 0) {
 				System.out.println("how much would you like?");
-				//System.out.println(itemQty + products[i] + " comes to $" + itemQty*price[i]);
 			}
+			//leads user directly to the cashier void if they're done (choose 0)
 			if(itemNum <= 0) {
 				cashier();
 			}
 			int qty = input.nextInt();//scans the amount of items the user bought
-			totalQty += qty;
-			
+			totalQty += qty;//adds the amount of items altogether
+			//game takes the amount of items to calculate the total cost as long as user keeps shopping	
 				if(itemNum == 1) {
 					System.out.println(qty + " " + products[0] + " comes to $" + qty*price[0]);
 					itemPrice = calcCost(price, qty);
@@ -105,14 +98,13 @@ public class Assign3StorePart2 {
 					shopping();
 				}
 		
-		} while(itemNum != 0);
+		} while(itemNum != 0);//every function within the do statement will keep occurring as long as user doesn't print 0
 		
-		cashier();
+		cashier();//takes user to cashier
 		
 	}//end shopping()
 	
 	private static double calcCost(double[] price2, int itemQty2) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
@@ -120,20 +112,22 @@ public class Assign3StorePart2 {
 		return price * itemQty;
 	}//end calcCost
 	
-	public static void cashier() {
+	public static void cashier() {	//where user pays their stuff
+		//prints only products the user picks along with the total of price and the amount they bought
 		System.out.println("Product: " + "\tPrice: " + "\tNum Bought: " + "\tTotal: ");
 		for(int i = 0; i < products.length; i++) {
 			if(itemQty[i] > 0) {
-				System.out.println(products[i] + "\t\t" + price[i] + "\t" + itemQty[i] + "\t\t"	+ " " + (itemQty[i]*price[i]));
+				System.out.println(products[i] + "\t\t$" + price[i] + "\t" + itemQty[i] + "\t\t"  + "$" + (itemQty[i]*price[i]));
 			}
-			totalPrice += (itemQty[i]*price[i]);
-
+			totalPrice += (itemQty[i]*price[i]);//total price sums up all the amount the user buys
 		}
-		System.out.println("total: " + totalPrice);
-
+		System.out.println();//spacer
+		System.out.println("Total: $" + totalPrice);//informs the total to the user
+		System.out.println();//spacer
+		System.out.println("Thank you for shopping, have a nice day!");//thanks the user to tell that their done
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//program begins with grocery shopping 
 		// TODO Auto-generated method stub
 		shopping();
 	}//end main
